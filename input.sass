@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900')
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+	box-sizing: border-box
+	font-family: 'Roboto', sans-serif
+
+=shadow($h,$v,$b,$s,$color)
+	-moz-box-shadow:    $h $v $b $s $color
+	-webkit-box-shadow: $h $v $b $s $color
+	box-shadow:         $h $v $b $s $color
+
+/* CLEARFIX METHOD */
+.row:before,
+.row:after
+	content: " "
+	display: table
+
+.row:after
+	clear: both
+/* ---------- CLEAR FIX END---------- */
+
+.container
+	width: 100%
+	height: 100%
+	padding-top: 50px
+	text-align: center
+
+.cardContainer
+	width: 360px
+	height: 560px
+	display: inline-block
+	margin: 20px
+	position: relative
+	perspective: 1000px
+	>div
+		height: 100%
+		width: 100%
+		position: absolute
+		transform-style: preserve-3d
+		transition: transform 1s
+
+figure
+	margin: 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	position: absolute
+	width: 100%
+	height: 100%
+	backface-visibility: hidden
+
+.back
+	transform: rotateY(180deg)
+	align-items: center
+	p
+		@extend .title
+
+.flipped
+	transform: rotateY(180deg)
+
+.img
+	width: 100%
+	height: 140px
+	line-height: 140px
+	img
+		vertical-align: middle
+
+.title
+	font-weight: 900
+	font-size: 34px
+	width: 100%
+	padding: 0 65px
+	span
+		font-weight: 500
+
+.list
+	width: 100%
+	padding: 0 21px
+	text-align: left
+	margin: auto
+	ul
+		li
+			list-style: none
+			font-size: 17px
+			font-weight: 500
+			background: url("../images/check.png") no-repeat top left
+			padding-left: 24px
+			line-height: 1.6em
+			span
+				font-weight: 900
+				color: #64cae7
+
+.btn
+	margin-bottom: 13px
+	button
+		font-size: 24px
+		font-weight: 500
+		padding: 0 22px
+		height: 57px
+		background: #f99f64
+		border-radius: 10px
+		color: #fff
+		cursor: pointer
+.note
+	margin-bottom: 22px
+	font-size: 10px
+	text-decoration: underline
+	font-weight: 500
+	cursor: pointer
+
+.shadow
+	+shadow(0,0,5px,6px,#add8e6)
+
+/* The Modal (background) */
+.modal 
+	display: none
+	position: fixed
+	z-index: 1
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background-color: rgb(0,0,0)
+	background-color: rgba(0,0,0,0.4)
+
+
+/* Modal Content/Box */
+.modal-content
+	background-color: #fefefe
+	margin: 1% auto
+	padding: 20px
+	width: 35%
+	min-width: 320px
+	position: relative
+	text-align: center
+	form
+		width: 80%
+		margin: 20px auto
+	.formTitle
+		@extend .title
+		padding: 0
+
+.confirm
+	display: none
+	background-color: #fefefe
+	padding: 20px
+	width: 100%
+	height: 100%
+	min-width: 320px
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	.confirm-container
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		.title
+			padding: 0
+		.img
+			height: auto
+			margin: 15% 0
+/* The Close Button */
+.close
+	color: #aaa
+	float: right
+	font-size: 28px
+	font-weight: bold
+	position: absolute
+	width: 34px
+	height: 34px
+	right: 10px
+	top: 10px
+
+
+.close:hover,
+.close:focus
+	color: black
+	text-decoration: none
+	cursor: pointer
+
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea
+	width: 100%
+	padding: 12px
+	padding-left: 0
+	border: none 
+	border-bottom: 1px solid #ccc
+	box-sizing: border-box
+	margin-top: 6px
+	margin-bottom: 16px
+
+textarea
+	height: 44px
+	display: block
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+textarea:focus
+	outline: none
+
+input[type=checkbox]
+	margin-top: 20px
+	width: 20px
+	height: 20px
+	+ label
+		font-size: 0.8em
+		padding-left: 10px
+		margin-top: -10px
+		width: 85%
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+
+input[type=button]
+	display: block
+	font-size: 24px
+	font-weight: 500
+	padding: 0 22px
+	margin: 20px auto
+	height: 57px
+	background: #f99f64
+	border-radius: 10px
+	color: #fff
+	cursor: pointer
+
+input[type=button]:focus,
+.btn button:focus
+	outline: none
+
+@media only screen and (max-width: 1200px)
+	.container
+		padding-top: 0
+	.cardContainer
+		display: block
+		margin: 20px auto

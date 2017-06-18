@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="css/style.css">
+	<title>Cards</title>
+</head>
+<body>
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	  	<div class="confirm">
+	  		<div class="confirm-container">
+	  			<div class="title">
+		  			<h1>Dziękujemy za zgłoszenie</h1>
+		  		</div>
+		  		<div class="img"><img src="images/ok.png" alt="confirm" /></div>
+		  		<p>Skontaktujemy się z tobą w możliwie najkrótszym terminie</p>
+	  		</div>
+	  	</div>
+			<div class="img"><img src="images/bank.png" alt="bank" /></div>
+			<div class="formTitle"></div>
+
+	    <span class="close">&times;</span>
+	    <form action="#">
+
+		    <input type="text" id="name" name="name" placeholder="Imię i nazwisko">
+
+		    <input type="text" id="cname" name="companyname" placeholder="Firma">
+
+		    <input type="email" id="email" name="email" placeholder="Adres e-mail">
+
+		    <input type="tel" id="phone" name="phonenumber" placeholder="Numer telefonu">
+
+		    <textarea id="address" name="address" placeholder="Adres do korespondencji"></textarea>
+
+		    <input type="checkbox" id="agree" name="agree" value="agree">
+		    	<label for="agree">Wyrażam zgodę na przetwarzanie moich danych osobowych</label>
+
+		    <input type="button" value="Wyślij">
+
+		  </form>
+	  </div>
+
+	</div>
+	
+	<div class="container">
+		<div class="row">
+
+			<div class="cardContainer">
+				<div id="card_1">
+					<figure class="front">
+						<div class="img"><img src="images/bank.png" alt="bank" /></div>
+						<div class="title"><h1>BIZnest Kredyt dla firm <br /><span>do 550 000 zł</span></h1></div>
+						<div class="list">
+							<ul>
+								<li>na <span>dowolny cel</span> biznesowy</li>
+								<li>na okres spłaty do<span> 144 miesięcy</span></li>
+								<li>do <span>30 000 zl</span> bez zaświadczenia z ZUS</li>
+								<li>wstępna decyzja <span>nawet w 2 minuty</span></li>
+							</ul>
+						</div>
+						<div class="btn"><button>ZAMÓW ROZMOWĘ</button></div>
+						<div class="note">Nota prawna</div>
+					</figure>
+					<figure class="back"></figure>
+				</div>
+			</div>
+
+			<div class="cardContainer">
+				<div id="card_2">
+					<figure class="front">
+						<div class="img"><img src="images/card.png" alt="card" /></div>
+						<div class="title"><h1>Nest Konto osobiste</h1></div>
+						<div class="list">
+							<ul>
+								<li><span>0 zł</span> na założenie i prowadzenie konta</li>
+								<li><span>0 zł</span> za wydanie i korzystanie z pierwszej karty</li>
+								<li><span>0 zł</span> za wypłaty gotówki ze wszystkich bankomatów w Polsce</li>
+								<li><span>0 zł</span> za internetowe przelewy krajowe</li>
+							</ul>
+						</div>
+						<div class="btn"><button>ZAŁÓŻ KONTO</button></div>
+						<div class="note">Nota prawna</div>
+					</figure>
+					<figure class="back"></figure>
+				</div>
+			</div>
+
+			<div class="cardContainer">
+				<div id="card_3">
+					<figure class="front">
+						<div class="img"><img src="images/company-card.png" alt="company-card" /></div>
+						<div class="title"><h1>BIZnest Konto dla firm</h1></div>
+						<div class="list"><ul>
+								<li><span>0 zł</span> na założenie i prowadzenie konta</li>
+								<li><span>0 zł</span> za wydanie i korzystanie z pierwszej karty</li>
+								<li><span>0 zł</span> za internetowe przelewy do ZUS-u i US</li>
+								<li><span>0 zł</span> za wypłaty gotówki ze wszystkich bankomatów w Polsce</li>
+							</ul></div>
+						<div class="btn"><button>ZAŁÓŻ KONTO</button></div>
+						<div class="note">Nota prawna</div>
+					</figure>
+					<figure class="back"></figure>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="main.js"></script>
+	<script src="card.js"></script>
+</body>
+</html>
