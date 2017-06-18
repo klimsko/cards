@@ -132,7 +132,8 @@ figure {
   width: 35%;
   min-width: 320px;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
   .modal-content form {
     width: 80%;
     margin: 20px auto; }
@@ -171,7 +172,8 @@ figure {
   width: 34px;
   height: 34px;
   right: 10px;
-  top: 10px; }
+  top: 10px;
+  z-index: 9999; }
 
 .close:hover,
 .close:focus {

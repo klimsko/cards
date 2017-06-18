@@ -1,6 +1,7 @@
 var count = -1;
 
 const modal = $('#myModal');
+const modalCont = $('#myModal .modal-content');
 const close = $('.close');
 const contactForm = $('.formTitle');
 const	confBtn = $('input[type=button]');
@@ -25,9 +26,18 @@ $('.btn button').click(function(){
 })
 
 confBtn.click(function(){
+	modalCont.css('height', '70%');
 	confWindow.show();
 })
 
+$(window).click(function(e){
+	if (e.target == modal[0] || e.target == close[0]){
+		modal.hide();
+		confWindow.hide();
+		modalCont.css('height', 'auto');
+		keyControl('on');
+	}
+})
 
 keyControl('on');
 
@@ -78,13 +88,7 @@ function modalOpen(currentCard, win){
 
 }
 
-$(window).click(function(e){
-	if (e.target == modal[0] || e.target == close[0]){
-		modal.hide();
-		confWindow.hide();
-		keyControl('on');
-	}
-})
+
 
 
 function keys(e){
