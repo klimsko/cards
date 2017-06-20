@@ -32,12 +32,12 @@ go();
   }
 //--------------------------------------------------
 
-$('.btn button').click(function(){
+$('.btn button').on('tap', function(){
 	contactForm.html('<h1>Formularz kontaktowy</h1>');
 	modalOpen();
 })
 
-confBtn.click(function(){
+confBtn.on('tap', function(){
 	if (width <= 500){
 		modalCont.css('height', height);
 	} else modalCont.css('height', '65%');
@@ -45,7 +45,7 @@ confBtn.click(function(){
 	confWindow.show();
 })
 
-$(window).click(function(e){
+$(window).on('tap', function(e){
 	if (e.target == modal[0] || e.target == close[0]){
 		modal.hide();
 		confWindow.hide();
