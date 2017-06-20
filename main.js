@@ -1,4 +1,6 @@
 var count = -1;
+var width,
+		height;
 
 const modal = $('#myModal');
 const modalCont = $('#myModal .modal-content');
@@ -20,17 +22,30 @@ function rand(min, max) {
 
 }
 
-$('.btn button').click(function(){
+// RESIZE WINDOW function ------------------------
+go();
+  window.addEventListener('resize', go);
+
+  function go(){
+    width = document.documentElement.clientWidth
+    height = document.documentElement.clientHeight;
+  }
+//--------------------------------------------------
+
+$('.btn button').on('tap', function(){
 	contactForm.html('<h1>Formularz kontaktowy</h1>');
 	modalOpen();
 })
 
-confBtn.click(function(){
-	modalCont.css('height', '70%');
+confBtn.on('tap', function(){
+	if (width <= 500){
+		modalCont.css('height', height);
+	} else modalCont.css('height', '65%');
+	
 	confWindow.show();
 })
 
-$(window).click(function(e){
+$(window).on('tap', function(e){
 	if (e.target == modal[0] || e.target == close[0]){
 		modal.hide();
 		confWindow.hide();
@@ -87,8 +102,6 @@ function modalOpen(currentCard, win){
 	}
 
 }
-
-
 
 
 function keys(e){

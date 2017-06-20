@@ -131,6 +131,7 @@ figure {
   padding: 20px;
   width: 35%;
   min-width: 320px;
+  min-height: 400px;
   position: relative;
   text-align: center;
   overflow: hidden; }
