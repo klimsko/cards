@@ -73,7 +73,8 @@ figure {
 
 .list {
   width: 100%;
-  padding: 0 19px;
+  padding-left: 40px;
+  padding-right: 13px;
   text-align: left;
   margin: auto; }
   .list ul li {
@@ -242,9 +243,6 @@ input[type=button]:focus,
     margin: 20px auto; }
 
   .title, .back p, .modal-content .formTitle {
-    padding: 0 10%; }
-
-  .list {
-    padding: 0 2%; } }
+    padding: 0 10%; } }
 
 /*# sourceMappingURL=style.css.map */
